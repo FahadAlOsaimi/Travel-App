@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Travel App</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Weather results." />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;515;600;700&display=swap"
+      rel="stylesheet"
+    />
+  <link href="main.css" rel="stylesheet"></head>
+
+  <body>
+    <header>
+      <h1>Capstone: Travel app</h1>
+    </header>
+    <div class="form">
+      <div class="inputs">
+        <label>Enter the country name: </label>
+        <input type="text" placeholder="Exp: UAE" id="country" />
+        <label> Enter the city name:</label>
+        <input type="text" placeholder="Exp: Dubai" id="city" />
+        <br />
+        <label> Which date will the trip be? </label>
+        <input type="date" id="date" class="pointer" />
+        <label> till </label>
+        <input type="date" id="date-end" class="pointer" />
+        <input type="submit" value="Generate" id="generate" class="pointer" />
+      </div>
+      <div class="results">
+        <h3 id="destination">Destination, info:</h3>
+        <h3>Weather at that time:</h3>
+        <ul>
+          <li id="high">Highest temperature »</li>
+          <li id="lowest">Lowest temperature »</li>
+          <li id="desc">Description »</li>
+        </ul>
+      </div>
+    </div>
+    <div class="image">
+      <h3>Image of the place:</h3>
+      <img id="load" src="" alt="" />
+    </div>
+    <footer>© Udacity, made by Fahad.</footer>
+  <script type="text/javascript" src="main.js"></script></body>
+</html>
