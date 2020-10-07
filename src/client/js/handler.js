@@ -30,8 +30,10 @@ async function handle() {
 }
 
 // To run on submission.
-document.getElementById("generate").addEventListener("click", () => {
-  handle();
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("generate").addEventListener("click", () => {
+    handle();
+  });
 });
 
 //document.getElementById("save").addEventListener("click", () => {});
