@@ -5,7 +5,7 @@ async function geo(city, country) {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ city: city, country: country, message: "PASSED." }),
+    body: JSON.stringify({ city: city, country: country }),
   })
     .then((res) => res.json())
     .then(function (res) {
