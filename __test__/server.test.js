@@ -1,3 +1,4 @@
+// Great source: https://zellwk.com/blog/endpoint-testing/
 const app = require("../src/server/server");
 const supertest = require("supertest");
 const request = supertest(app);
@@ -5,7 +6,8 @@ const request = supertest(app);
 // Help: https://stackoverflow.com/questions/53558916/babel-7-referenceerror-regeneratorruntime-is-not-defined
 import "regenerator-runtime/runtime";
 
-it("Testing geoNames API.", async () => {
-  const response = await request.get("http://localhost:3000/geoNames");
-  expect(response).toBeDefined();
+it("Gets the test endpoint", async (done) => {
+  const res = await request.get("/geoNames");
+  expect(res).toBeDefined();
+  done();
 });
