@@ -35,7 +35,7 @@ const pixKey = process.env.PIX_KEY + "&q=";
 const pixURL2 = "&image_type=photo&pretty=true";
 let pix;
 
-const port = process.env.PORT || 5500;
+const port = 5500 || process.env.PORT;
 const server = app.listen(port, () => {
   console.log("Server is running on port:" + port);
 });
@@ -55,6 +55,7 @@ app.post("/geoNames", async (req, res) => {
     lat = newData.geonames[0].lat;
     console.log("Success GeoNames API.");
     res.send(newData);
+    return newData;
   } catch (error) {
     console.log(error);
   }
