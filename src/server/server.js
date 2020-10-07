@@ -34,12 +34,13 @@ const pixURL1 = "https://pixabay.com/api/?key=";
 const pixKey = process.env.PIX_KEY + "&q=";
 const pixURL2 = "&image_type=photo&pretty=true";
 let pix;
-
+// The reason why i commented app.listen so the tests does not give me an error of used port.
+/*
 const port = 5500 || process.env.PORT;
 const server = app.listen(port, () => {
   console.log("Server is running on port:" + port);
-});
-module.exports = server; // To use in with testing.
+}); */
+module.exports = app; // To use in with testing.
 
 app.get("/", function (req, res) {
   res.sendFile("dist/index.html");
